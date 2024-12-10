@@ -338,15 +338,17 @@ namespace 도서대여관리
 
             //gridView1.DeleteSelectedRows();
 
+            MessageBox.Show("삭제되었습니다");
+
             search1(); // 검색
 
             // 비활성화 풀어줌
-            username.ReadOnly = false;
+            /*username.ReadOnly = false;
             usercode.ReadOnly = false;
             cmb.Enabled = true;
             tel.ReadOnly = false;
             borrow.ReadOnly = false;
-            reservation.ReadOnly = false;
+            reservation.ReadOnly = false;*/
 
         }
 

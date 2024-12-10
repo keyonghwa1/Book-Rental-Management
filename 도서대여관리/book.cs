@@ -126,7 +126,7 @@ namespace 도서대여관리
                 return; // false이므로 db연결이 되지 않았다는 것!!
 
             SqlCommand cmd = new SqlCommand();
-            MessageBox.Show("INSERT 이쪽으로 넘어옴");
+            //MessageBox.Show("INSERT 이쪽으로 넘어옴");
             try
             {            
                 cmd.Connection = sql_connection; // db와 연결
@@ -363,7 +363,7 @@ namespace 도서대여관리
             if (!bwork1)
                 return; // false이므로 db연결이 되지 않았다는 것!!
 
-            MessageBox.Show("update로 확인버튼으로 들어와");
+            //MessageBox.Show("update로 확인버튼으로 들어와");
 
             SqlCommand sqlcmd = new SqlCommand();
 
@@ -398,7 +398,7 @@ namespace 도서대여관리
             int result = Int32.Parse(p_message);
 
              if (result >= 1)
-             { MessageBox.Show("업데이트 성공"); }
+             { MessageBox.Show("수정되었습니다."); }
              else { MessageBox.Show("실패"); }
 
 

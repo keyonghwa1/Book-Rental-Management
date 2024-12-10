@@ -471,12 +471,12 @@ namespace 도서대여프로그램
 
             sqlcmd.CommandText = "dbo.sp_book_borrow";
 
-            sqlcmd.Parameters.AddWithValue("@message", "book_management select");
+            //sqlcmd.Parameters.AddWithValue("@message", "book_management select");
 
-            sqlcmd.Parameters.AddWithValue("@p_div", "R"); // 먼저 조회(조인)
+            sqlcmd.Parameters.AddWithValue("@p_div", "RES"); // 먼저 조회(조인)
 
-            sqlcmd.Parameters.AddWithValue("@name", namee.Text.ToString());
-            sqlcmd.Parameters.AddWithValue("@tel", handphonee.Text.ToString());
+            sqlcmd.Parameters.AddWithValue("@p_name", namee.Text.ToString());
+            sqlcmd.Parameters.AddWithValue("@p_tel", handphonee.Text.ToString());
 
 
             try
@@ -604,11 +604,11 @@ namespace 도서대여프로그램
             //sqlcmd.Parameters.AddWithValue("@message", "book_management select");
 
 
-            sqlcmd.Parameters.AddWithValue("@p_div", "Uuu"); //  cmd.Parameters.Add()를 사용한다면 데이터의 유형 및 길이를 지정하여 사용자 입력을 제한 받을수있다,
+            sqlcmd.Parameters.AddWithValue("@p_div", "RESERVE"); //  cmd.Parameters.Add()를 사용한다면 데이터의 유형 및 길이를 지정하여 사용자 입력을 제한 받을수있다,
             //예) .Parameters.Add("@name",SqlDbType.VarChar,30).Value=varName;
 
 
-            sqlcmd.Parameters.AddWithValue("@returndate", Convert.ToDateTime(gridView4.GetFocusedRowCellValue(returndatee).ToString()));
+            sqlcmd.Parameters.AddWithValue("@p_returndate", Convert.ToDateTime(gridView4.GetFocusedRowCellValue(returndatee).ToString()));
             // sqlcmd.Parameters.AddWithValue("@borrowno", gridView4.GetFocusedRowCellValue(returndatee).ToString());
 
             sqlcmd.Parameters.AddWithValue("@borrowok", gridView4.GetFocusedRowCellValue(borrowokk).ToString());

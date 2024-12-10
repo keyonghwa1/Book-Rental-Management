@@ -762,7 +762,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(66, 18);
             this.button5.TabIndex = 1;
-            this.button5.Text = "반납";
+            this.button5.Text = "검색";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
