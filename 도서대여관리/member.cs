@@ -260,7 +260,7 @@ namespace 도서대여관리
             MessageBox.Show("search MEMBER_NO= " + member_no.Text.ToString() + "search name = " + name.Text.ToString());
              
 
-
+            
             try
             {
 
