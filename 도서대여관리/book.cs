@@ -29,9 +29,9 @@ namespace 도서대여관리
             //string connection_str = @"Server=121.170.218.149; uid=gmpit; pwd=gmpit)9)5; database=GMPIT";
 
             // 스터디 카페 ip
-            //string connection_str = @"Server=192.168.1.7; uid=system; pwd=hr2; database=master";
+            string connection_str = @"Server=192.168.1.19; uid=system; pwd=hr2; database=master";
             // 집 ip
-            string connection_str = @"Server=192.168.219.103; uid=system; pwd=hr2; database=master";
+            //string connection_str = @"Server=192.168.219.103; uid=system; pwd=hr2; database=master";
 
             //string connection_str = @"Server=172.30.1.74; uid=system; pwd=hr2; database=master";
             

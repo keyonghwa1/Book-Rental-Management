@@ -149,7 +149,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 12);
             this.label8.TabIndex = 14;
-            this.label8.Text = "대출/가능건수";
+            this.label8.Text = "대여/가능건수";
             // 
             // borrow
             // 
@@ -162,7 +162,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(772, 187);
+            this.label9.Location = new System.Drawing.Point(772, 191);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(83, 12);
             this.label9.TabIndex = 16;
@@ -331,13 +331,14 @@
             // 
             // update
             // 
-            this.update.Location = new System.Drawing.Point(542, 50);
+            this.update.Location = new System.Drawing.Point(912, 254);
             this.update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(96, 22);
             this.update.TabIndex = 23;
             this.update.Text = "수정";
             this.update.UseVisualStyleBackColor = true;
+            this.update.Visible = false;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // search
@@ -361,7 +362,6 @@
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.name);
             this.groupControl1.Controls.Add(this.label2);
-            this.groupControl1.Controls.Add(this.update);
             this.groupControl1.Controls.Add(this.button1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
@@ -389,7 +389,7 @@
             this.Ucheck.Name = "Ucheck";
             this.Ucheck.Size = new System.Drawing.Size(96, 22);
             this.Ucheck.TabIndex = 32;
-            this.Ucheck.Text = "수정 확인";
+            this.Ucheck.Text = "수정";
             this.Ucheck.UseVisualStyleBackColor = true;
             this.Ucheck.Click += new System.EventHandler(this.Ucheck_Click);
             // 
@@ -464,6 +464,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.reservation);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.borrow);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tel);

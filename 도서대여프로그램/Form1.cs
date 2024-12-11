@@ -19,9 +19,9 @@ namespace 도서대여프로그램
             //string connection_str = @"Server=121.170.218.149; uid=gmpit; pwd=gmpit)9)5; database=GMPIT";
 
             // 스터디 카페 ip
-            //string connection_str = @"Server=192.168.1.7; uid=system; pwd=hr2; database=master";
+            string connection_str = @"Server=192.168.1.19; uid=system; pwd=hr2; database=master";
             // 집 ip
-            string connection_str = @"Server=192.168.219.103; uid=system; pwd=hr2; database=master";
+            //string connection_str = @"Server=192.168.219.103; uid=system; pwd=hr2; database=master";
 
             sql_connection = new SqlConnection(connection_str);
             try
@@ -325,7 +325,7 @@ namespace 도서대여프로그램
 
            int result  = cmd.ExecuteNonQuery();
 
-           if (result > 0)
+           /*if (result > 0)
            {
 
                MessageBox.Show("성공");
@@ -333,7 +333,7 @@ namespace 도서대여프로그램
            else {
 
                MessageBox.Show("실패");
-           }
+           }*/
 
         }
 
@@ -611,8 +611,8 @@ namespace 도서대여프로그램
             sqlcmd.Parameters.AddWithValue("@p_returndate", Convert.ToDateTime(gridView4.GetFocusedRowCellValue(returndatee).ToString()));
             // sqlcmd.Parameters.AddWithValue("@borrowno", gridView4.GetFocusedRowCellValue(returndatee).ToString());
 
-            sqlcmd.Parameters.AddWithValue("@borrowok", gridView4.GetFocusedRowCellValue(borrowokk).ToString());
-            sqlcmd.Parameters.AddWithValue("@borrowno", gridView4.GetFocusedRowCellValue(borrownoo).ToString());
+            sqlcmd.Parameters.AddWithValue("@p_borrowok", gridView4.GetFocusedRowCellValue(borrowokk).ToString());
+            sqlcmd.Parameters.AddWithValue("@p_borrowno", gridView4.GetFocusedRowCellValue(borrownoo).ToString());
 
             sqlcmd.ExecuteNonQuery();
 

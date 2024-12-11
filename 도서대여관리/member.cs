@@ -31,9 +31,9 @@ namespace 도서대여관리
             //string connection_str = @"Server=121.170.218.149; uid=gmpit; pwd=gmpit)9)5; database=GMPIT";
 
             // 스터디 카페 ip
-            //string connection_str = @"Server=192.168.1.7; uid=system; pwd=hr2; database=master";
+            string connection_str = @"Server=192.168.1.19; uid=system; pwd=hr2; database=master";
             // 집 ip
-            string connection_str = @"Server=192.168.219.103; uid=system; pwd=hr2; database=master";
+            //string connection_str = @"Server=192.168.219.103; uid=system; pwd=hr2; database=master";
 
             //string connection_str = @"Server=172.30.1.74; uid=system; pwd=hr2; database=master";
 
@@ -51,9 +51,9 @@ namespace 도서대여관리
         }
         
 
-        OracleConnection sql_connection2;
+        //OracleConnection sql_connection2;
 
-        private void Ofn_dbConnection(ref bool bwork) // db연결
+       /* private void Ofn_dbConnection(ref bool bwork) // db연결
         {
             bwork = true; // db 연결
 
@@ -72,11 +72,10 @@ namespace 도서대여관리
                 bwork = false;
             }
 
-        }
+        }*/
 
         private void member_grade()
         { //회원 등급
-            cmb.Items.Add("선택");
             cmb.Items.Add("일반");
             cmb.Items.Add("vip");
             
@@ -125,7 +124,7 @@ namespace 도서대여관리
 
                 String p_message = cmd.Parameters["@p_message"].Value.ToString();
 
-                MessageBox.Show("message 회원번호=" + usercode.Text); // usercode.Text안에 들어갔음
+                //MessageBox.Show("message 회원번호=" + usercode.Text); // usercode.Text안에 들어갔음
 
                 if (Int32.Parse(p_message) > 0)
                 {
@@ -159,7 +158,7 @@ namespace 도서대여관리
             cmd.Parameters.AddWithValue("@p_div", "I");
 
             cmd.Parameters.AddWithValue("@p_member_grade", cmb.Text.ToString()); // textbox.text.tostring - 사용하면 텍스트 상자에서 텍스트를 가져 와서 해당 텍스트 유형으로 변환합니다.
-            cmd.Parameters.AddWithValue("@p_member_no", usercode.Text.ToString());// textbox.text - 문자열이 아닐수 있음
+            //cmd.Parameters.AddWithValue("@p_member_no", usercode.Text.ToString());// textbox.text - 문자열이 아닐수 있음
             cmd.Parameters.AddWithValue("@p_name", username.Text.ToString());
             cmd.Parameters.AddWithValue("@p_tel", tel.Text.ToString());
             cmd.Parameters.AddWithValue("@p_borrow", borrow.Text.ToString());
@@ -234,7 +233,7 @@ namespace 도서대여관리
 
 
         // Oracle
-        private void Osearch1() // 검색 메소드
+       /* private void Osearch1() // 검색 메소드
         {
 
             bool bwork1 = false;
@@ -294,6 +293,7 @@ namespace 도서대여관리
             MessageBox.Show(icount.ToString());
         }
 
+        */
 
         private void update_Click(object sender, EventArgs e) // 수정 버튼
         {
