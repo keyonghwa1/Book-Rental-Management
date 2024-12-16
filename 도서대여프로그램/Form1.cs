@@ -9,7 +9,7 @@ namespace 도서대여프로그램
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void fn_dbConnection(ref bool bwork) // db연결
