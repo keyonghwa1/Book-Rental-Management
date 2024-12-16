@@ -49,17 +49,6 @@ namespace 도서대여관리
 
         }
 
-        private void bookform_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void memberStatue_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void book_locate() // 소장 위치(책)
         { 
             bk_location.Items.Add("자료실1");
