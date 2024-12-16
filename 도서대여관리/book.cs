@@ -73,7 +73,6 @@ namespace 도서대여관리
             bk_state.Items.Add("깨끗");
             bk_state.Items.Add("중간");
 
-
         }
 
         private void book_carryin()
