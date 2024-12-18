@@ -155,7 +155,7 @@
             this.bk_location.Name = "bk_location";
             this.bk_location.Size = new System.Drawing.Size(88, 20);
             this.bk_location.TabIndex = 18;
-            this.bk_location.SelectedIndexChanged += new System.EventHandler(this.memberStatue_SelectedIndexChanged);
+            
             // 
             // ISBN_2
             // 
@@ -539,7 +539,7 @@
             this.Name = "bookform";
             this.Text = "book";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.bookform_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
