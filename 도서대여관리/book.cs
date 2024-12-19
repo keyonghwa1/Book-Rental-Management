@@ -26,8 +26,10 @@ namespace 도서대여관리
         {
             bwork = true; // db 연결
 
-            string connection_str = @"Server=192.168.219.106; uid=system; pwd=hr2; database=master";
-            
+            //string connection_str = @"Server=192.168.219.106; uid=system; pwd=hr2; database=master";
+
+            string connection_str = @"Server=192.168.1.5; uid=system; pwd=hr2; database=master";
+
             sql_connection = new SqlConnection(connection_str);
             try
             {
@@ -65,27 +67,6 @@ namespace 도서대여관리
 
         }
 
-
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox12_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
 
         string regi_n1; // output 해 놓은거 담을 변수
 

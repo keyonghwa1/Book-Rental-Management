@@ -16,7 +16,9 @@ namespace 도서대여프로그램
         {
             bwork = true; // db 연결
 
-            string connection_str = @"Server=192.168.219.106; uid=system; pwd=hr2; database=master";
+            //string connection_str = @"Server=192.168.219.106; uid=system; pwd=hr2; database=master";
+
+            string connection_str = @"Server=192.168.1.5; uid=system; pwd=hr2; database=master";
 
             sql_connection = new SqlConnection(connection_str);
             try
@@ -557,11 +559,11 @@ namespace 도서대여프로그램
                 if (gridView4.RowCount > 0 && gridView4.FocusedRowHandle > -1) // gridView1.FocusedRowHandle -> 중요!!!!
                 {
 
-                    gridView3.GetFocusedRowCellValue(colnamee).ToString(); // gridview에서 설정한 colums -> name 으로 쓴다,
-                     gridView3.GetFocusedRowCellValue(coltell).ToString(); // 회원명
-                    gridView3.GetFocusedRowCellValue(booknamee).ToString();
-                    gridView3.GetFocusedRowCellValue(borrowdatee).ToString();
-                     gridView3.GetFocusedRowCellValue(returndatee).ToString();
+                    gridView4.GetFocusedRowCellValue(colnamee).ToString(); // gridview에서 설정한 colums -> name 으로 쓴다,
+                    gridView4.GetFocusedRowCellValue(coltell).ToString(); // 회원명
+                    gridView4.GetFocusedRowCellValue(booknamee).ToString();
+                    gridView4.GetFocusedRowCellValue(borrowdatee).ToString();
+                     gridView4.GetFocusedRowCellValue(returndatee).ToString();
                   
 
                 }
