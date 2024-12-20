@@ -405,12 +405,7 @@ namespace 도서대여관리
             {
                 if (gridView1.RowCount > 0 && gridView1.FocusedRowHandle > -1) // gridView1.FocusedRowHandle -> 중요!!!!
                 {
-                    /*gridView1.SetFocusedRowCellValue(coluserName.ToString(), Int32.Parse(usercode1) - 1);
-                    gridView1.SetFocusedRowCellValue(coluserCode.ToString(), Int32.Parse(usercode1) - 1);
-                    gridView1.SetFocusedRowCellValue(colUsertel.ToString(), Int32.Parse(usercode1) - 1);
-                    gridView1.SetFocusedRowCellValue(colUserBorrow.ToString(), Int32.Parse(usercode1) - 1);
-                    gridView1.SetFocusedRowCellValue(colUserReserve.ToString(), Int32.Parse(usercode1) - 1);*/
-
+                   
                     username.Text = gridView1.GetFocusedRowCellValue(coluserName).ToString(); // gridview에서 설정한 colums -> name 으로 쓴다,
                     usercode.Text = gridView1.GetFocusedRowCellValue(coluserCode).ToString(); // 회원명
                     cmb.Text = gridView1.GetFocusedRowCellValue(colUsergrade).ToString(); // 회원등급
