@@ -454,47 +454,50 @@ namespace 도서대여프로그램
 
         private void button5_Click(object sender, EventArgs e) // 반납
         {
-            bool bwork1 = false;
 
-            fn_dbConnection(ref bwork1);
-            if (!bwork1)
-                return; // false이므로 db연결이 되지 않았다는 것!!
+            search2();
+            
+//            bool bwork1 = false;
 
-            SqlCommand sqlcmd = new SqlCommand();
+//            fn_dbConnection(ref bwork1);
+//            if (!bwork1)
+//                return; // false이므로 db연결이 되지 않았다는 것!!
 
-            sqlcmd.Connection = sql_connection; // db와 연결
+//            SqlCommand sqlcmd = new SqlCommand();
 
-            sqlcmd.CommandType = CommandType.StoredProcedure;
+//            sqlcmd.Connection = sql_connection; // db와 연결
 
-            sqlcmd.CommandText = "dbo.sp_book_borrow";
+//            sqlcmd.CommandType = CommandType.StoredProcedure;
+
+//            sqlcmd.CommandText = "dbo.sp_book_borrow";
 
             //sqlcmd.Parameters.AddWithValue("@message", "book_management select");
 
-            sqlcmd.Parameters.AddWithValue("@p_div", "RES"); // 먼저 조회(조인)
+//            sqlcmd.Parameters.AddWithValue("@p_div", "RES"); // 먼저 조회(조인)
 
-            sqlcmd.Parameters.AddWithValue("@p_name", namee.Text.ToString());
-            sqlcmd.Parameters.AddWithValue("@p_tel", handphonee.Text.ToString());
+//            sqlcmd.Parameters.AddWithValue("@p_name", namee.Text.ToString());
+//            sqlcmd.Parameters.AddWithValue("@p_tel", handphonee.Text.ToString());
 
 
-            try
-            {
-                DataSet nDataSet = new DataSet(); // 데이타 부서정보, 여러 정보들 하나의 객체 x 그룹으로 볼수있다는것!
+//            try
+//            {
+//                DataSet nDataSet = new DataSet(); // 데이타 부서정보, 여러 정보들 하나의 객체 x 그룹으로 볼수있다는것!
                 // 개념: 엑셀 시트 123 -> 데이타 셋
                 // c#.net 데이타 호출 -> 데이타 셋 (넘겨받는건 무조건 set) -> 보이는건 table로 보인다 그러므로 불러오는건 set 
-                SqlDataAdapter nSqlDataAdapter = new SqlDataAdapter(sqlcmd); // adapter 통해 
-                nSqlDataAdapter.Fill(nDataSet);
-                gridControl4.DataSource = nDataSet.Tables[0]; // gridcontrol
+//                SqlDataAdapter nSqlDataAdapter = new SqlDataAdapter(sqlcmd); // adapter 통해 
+//                nSqlDataAdapter.Fill(nDataSet);
+//                gridControl4.DataSource = nDataSet.Tables[0]; // gridcontrol
 
-            }
-            catch (SqlException ex)
-            {
-                string sreturnmessage = "데이터베이스 오류" + ex.Message.ToString();
-                MessageBox.Show(sreturnmessage);
-            }
-            finally
-            {
-                sql_connection.Close();
-            }
+//           }
+//            catch (SqlException ex)
+//            {
+//                string sreturnmessage = "데이터베이스 오류" + ex.Message.ToString();
+//                MessageBox.Show(sreturnmessage);
+//            }
+//            finally
+//            {
+//                sql_connection.Close();
+//            }
 
             ///////////////////////////////////////////////////////////////
 
@@ -609,7 +612,7 @@ namespace 도서대여프로그램
             // sqlcmd.Parameters.AddWithValue("@borrowno", gridView4.GetFocusedRowCellValue(returndatee).ToString());
 
             sqlcmd.Parameters.AddWithValue("@p_borrowok", gridView4.GetFocusedRowCellValue(borrowokk).ToString());
-            sqlcmd.Parameters.AddWithValue("@p_borrowno", gridView4.GetFocusedRowCellValue(borrownoo).ToString());
+            sqlcmd.Parameters.AddWithValue("@p_borrow_no", gridView4.GetFocusedRowCellValue(borrownoo).ToString());
 
             sqlcmd.ExecuteNonQuery();
 
@@ -632,14 +635,14 @@ namespace 도서대여프로그램
 
             sqlcmd.CommandType = CommandType.StoredProcedure;
 
-            sqlcmd.CommandText = "dbo.sp_book_borrow_ykh";
+            sqlcmd.CommandText = "dbo.sp_book_borrow";
 
-            sqlcmd.Parameters.AddWithValue("@message", "book_management select");
+            //sqlcmd.Parameters.AddWithValue("@message", "book_management select");
 
-            sqlcmd.Parameters.AddWithValue("@p_div", "SJ"); // 먼저 조회(조인)
+            sqlcmd.Parameters.AddWithValue("@p_div", "RES"); // 먼저 조회(조인)
 
-            sqlcmd.Parameters.AddWithValue("@name", namee.Text.ToString());
-            sqlcmd.Parameters.AddWithValue("@tel", handphonee.Text.ToString());
+            sqlcmd.Parameters.AddWithValue("@p_name", namee.Text.ToString());
+            sqlcmd.Parameters.AddWithValue("@p_tel", handphonee.Text.ToString());
 
 
             try
