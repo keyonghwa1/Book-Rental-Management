@@ -30,7 +30,7 @@ namespace 도서대여관리
 
             //string connection_str = @"Server=192.168.219.106; uid=system; pwd=hr2; database=master";
             
-            string connection_str = @"Server=192.168.1.5; uid=system; pwd=hr2; database=master";
+            string connection_str = @"Server=192.168.1.4; uid=system; pwd=hr2; database=master";
             
             sql_connection = new SqlConnection(connection_str);
             try
