@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraRichEdit.Layout;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -608,15 +609,43 @@ namespace 도서대여프로그램
             //예) .Parameters.Add("@name",SqlDbType.VarChar,30).Value=varName;
 
 
-            sqlcmd.Parameters.AddWithValue("@p_returndate", Convert.ToDateTime(gridView4.GetFocusedRowCellValue(returndatee).ToString()));
+            /*sqlcmd.Parameters.AddWithValue("@p_returndate", Convert.ToDateTime(gridView4.GetFocusedRowCellValue(returndatee).ToString()));
             // sqlcmd.Parameters.AddWithValue("@borrowno", gridView4.GetFocusedRowCellValue(returndatee).ToString());
 
-            sqlcmd.Parameters.AddWithValue("@p_borrowok", gridView4.GetFocusedRowCellValue(borrowokk).ToString());
+            sqlcmd.Parameters.AddWithValue("@p_borrowok", "N");
             sqlcmd.Parameters.AddWithValue("@p_borrow_no", gridView4.GetFocusedRowCellValue(borrownoo).ToString());
+            */
+            int RowNum = gridView4.RowCount;
+            String returndate = "";
+            String borrowokk = "";
 
-            sqlcmd.ExecuteNonQuery();
+            for (int i = 0;i<RowNum ;i++)
+            {
+                returndate = (string)gridView4.GetRowCellValue(i, "returndatee");
+                borrowokk = "N";
 
-            search2();
+                sqlcmd.Parameters.AddWithValue("@p_returndate", returndate);
+                sqlcmd.Parameters.AddWithValue("@p_borrowok", borrowokk);
+
+                if (i == RowNum - 1)
+                {
+                    MessageBox.Show("수정되었습니다");
+                    search2();
+                }
+                sqlcmd.ExecuteNonQuery();
+            }
+
+           /* if (sqlcmd.ExecuteNonQuery() >= 1)
+            {
+                MessageBox.Show("수정되었습니다");
+                search2();
+
+            }
+            else
+            {
+                MessageBox.Show("수정되지 않았습니다.");
+               
+            }*/
 
         }
 
