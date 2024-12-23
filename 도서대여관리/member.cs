@@ -28,9 +28,9 @@ namespace 도서대여관리
         {
             bwork = true; // db 연결
 
-            //string connection_str = @"Server=192.168.219.106; uid=system; pwd=hr2; database=master";
+            string connection_str = @"Server=192.168.219.102; uid=system; pwd=hr2; database=master";
             
-            string connection_str = @"Server=192.168.1.4; uid=system; pwd=hr2; database=master";
+            //string connection_str = @"Server=192.168.1.11; uid=system; pwd=hr2; database=master";
             
             sql_connection = new SqlConnection(connection_str);
             try
@@ -156,8 +156,8 @@ namespace 도서대여관리
             //cmd.Parameters.AddWithValue("@p_member_no", usercode.Text.ToString());// textbox.text - 문자열이 아닐수 있음
             cmd.Parameters.AddWithValue("@p_name", username.Text.ToString());
             cmd.Parameters.AddWithValue("@p_tel", tel.Text.ToString());
-            cmd.Parameters.AddWithValue("@p_borrow", borrow.Text.ToString());
-            cmd.Parameters.AddWithValue("@p_reserve", reservation.Text.ToString());
+            cmd.Parameters.AddWithValue("@p_borrow", "0");
+            cmd.Parameters.AddWithValue("@p_reserve", "0");
 
             cmd.ExecuteNonQuery();
         }
@@ -310,6 +310,12 @@ namespace 도서대여관리
             if (gridView1.RowCount == 0)
                 return;
 
+            if(username.Text =="" || username.Text == null)
+            {
+                gridView1.DeleteSelectedRows();
+                return;
+            }
+
             bool bwork1 = false;
             fn_dbConnection(ref bwork1);
             if (!bwork1)
@@ -329,13 +335,23 @@ namespace 도서대여관리
 
             cmd.Parameters.AddWithValue("@p_member_no", usercode.Text.ToString());
 
-            cmd.ExecuteNonQuery();
+            int delYN  = cmd.ExecuteNonQuery();
+
+            if (delYN > 0)
+            {
+                MessageBox.Show("삭제되었습니다");
+                search1(); // 검색
+
+            }else
+            {
+                MessageBox.Show("대여건수가 남아있어 삭제되지 않았습니다.");
+
+            }
+
+
 
             //gridView1.DeleteSelectedRows();
-
-            MessageBox.Show("삭제되었습니다");
-
-            search1(); // 검색
+            //search1(); // 검색
 
             // 비활성화 풀어줌
             /*username.ReadOnly = false;
@@ -354,14 +370,20 @@ namespace 도서대여관리
 
         private void Ucheck_Click(object sender, EventArgs e) // 업데이트 확인 버튼
         {
+            
+            if(username.Text == "" || username.Text == null)
+            {
+                MessageBox.Show("수정하려는 고객을 검색해주세요");
+                return;
+            }
+
+
             bool bwork1 = false;
 
             fn_dbConnection(ref bwork1);
             if (!bwork1)
                 return; // false이므로 db연결이 되지 않았다는 것!!
 
-
-            MessageBox.Show("update로 확인버튼으로 들어와");
 
             SqlCommand sqlcmd = new SqlCommand();
 

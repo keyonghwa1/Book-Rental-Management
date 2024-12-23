@@ -17,9 +17,9 @@ namespace 도서대여프로그램
         {
             bwork = true; // db 연결
 
-            //string connection_str = @"Server=192.168.219.106; uid=system; pwd=hr2; database=master";
+            string connection_str = @"Server=192.168.219.102; uid=system; pwd=hr2; database=master";
 
-            string connection_str = @"Server=192.168.1.4; uid=system; pwd=hr2; database=master";
+            //string connection_str = @"Server=192.168.1.11; uid=system; pwd=hr2; database=master";
 
             sql_connection = new SqlConnection(connection_str);
             try
@@ -242,17 +242,27 @@ namespace 도서대여프로그램
 
             cmd.Parameters.AddWithValue("@p_div", "BRC");
 
+            cmd.Parameters.AddWithValue("@p_bk_name", b_name.Text);
+            cmd.Parameters.AddWithValue("@p_bk_publ_date", b_year.Text);
+            cmd.Parameters.AddWithValue("@p_bk_publ_nm", b_publ.Text);
+
             cmd.Parameters.Add("@p_message", SqlDbType.NVarChar, 2000);
             cmd.Parameters["@p_message"].Direction = ParameterDirection.Output;
 
             cmd.ExecuteNonQuery();
 
             String p_message = cmd.Parameters["@p_message"].Value.ToString();
-          //  cmd.Parameters.AddWithValue("@bk_name", b_name.Text.ToString());// textbox.text - 문자열이 아닐수 있음
+            //  cmd.Parameters.AddWithValue("@bk_name", b_name.Text.ToString());// textbox.text - 문자열이 아닐수 있음
 
-            insertBorrow(); // 대여 입력
-            // 대여일자 확인
-            BorrowSearch();           
+            if (p_message.Equals("OK"))
+            {
+                insertBorrow(); // 대여 입력
+                
+            }
+            else
+            {
+                MessageBox.Show("책의 정보를 입력해주세요");
+            }
 
         }
 
@@ -323,15 +333,15 @@ namespace 도서대여프로그램
 
            int result  = cmd.ExecuteNonQuery();
 
-           /*if (result > 0)
+           if (result > 0)
            {
-
-               MessageBox.Show("성공");
-           }
+               MessageBox.Show("대여되었습니다.");
+               BorrowSearch();
+            }
            else {
 
-               MessageBox.Show("실패");
-           }*/
+               MessageBox.Show("대여건수를 초과하였습니다.");
+           }
 
         }
 
@@ -429,6 +439,7 @@ namespace 도서대여프로그램
                 p_borrowdate = borrow_date.Text.ToString();
 
             sqlcmd.Parameters.AddWithValue("@p_borrowdate", p_borrowdate);
+            sqlcmd.Parameters.AddWithValue("@p_borrowok", p_borrowok.Text);
 
             try
             {
@@ -588,24 +599,31 @@ namespace 도서대여프로그램
         private void save_Click(object sender, EventArgs e)
         {
 
+            if ((namee.Text == "" || namee.Text == null) && (handphonee.Text == "" || handphonee.Text == null))
+            {
+                MessageBox.Show("고객의 정보를 입력해주시기 바랍니다.");
+                return;
+            }
+                
+
             bool bwork1 = false;
 
             fn_dbConnection(ref bwork1);
             if (!bwork1)
                 return; // false이므로 db연결이 되지 않았다는 것!!
 
-            SqlCommand sqlcmd = new SqlCommand();
+            /*SqlCommand sqlcmd = new SqlCommand();
 
             sqlcmd.Connection = sql_connection; // db와 연결
 
             sqlcmd.CommandType = CommandType.StoredProcedure;
 
             sqlcmd.CommandText = "dbo.sp_book_borrow";
-
+            */
             //sqlcmd.Parameters.AddWithValue("@message", "book_management select");
 
 
-            sqlcmd.Parameters.AddWithValue("@p_div", "RESERVE"); //  cmd.Parameters.Add()를 사용한다면 데이터의 유형 및 길이를 지정하여 사용자 입력을 제한 받을수있다,
+            //sqlcmd.Parameters.AddWithValue("@p_div", "RESERVE"); //  cmd.Parameters.Add()를 사용한다면 데이터의 유형 및 길이를 지정하여 사용자 입력을 제한 받을수있다,
             //예) .Parameters.Add("@name",SqlDbType.VarChar,30).Value=varName;
 
 
@@ -616,23 +634,54 @@ namespace 도서대여프로그램
             sqlcmd.Parameters.AddWithValue("@p_borrow_no", gridView4.GetFocusedRowCellValue(borrownoo).ToString());
             */
             int RowNum = gridView4.RowCount;
-            String returndate = "";
+            String returndate="";
             String borrowokk = "";
+
+            if (RowNum == 0)
+            {
+                MessageBox.Show("반납할 책이 없습니다.");
+                return;
+            }
 
             for (int i = 0;i<RowNum ;i++)
             {
-                returndate = (string)gridView4.GetRowCellValue(i, "returndatee");
+
+                SqlCommand sqlcmd = new SqlCommand();
+
+                sqlcmd.Connection = sql_connection; // db와 연결
+
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+
+                sqlcmd.CommandText = "dbo.sp_book_borrow";
+
+                //sqlcmd.Parameters.AddWithValue("@message", "book_management select");
+
+
+                sqlcmd.Parameters.AddWithValue("@p_div", "RESERVE");
+
+                /*
+                Console.WriteLine(gridView4.GetRowCellValue(0, returndatee).ToString());
+                Console.WriteLine(gridView4.GetRowCellValue(1, returndatee).ToString());
+                */
+                /*
+                returndate = gridView4.GetRowCellValue(i, returndatee).ToString();
+                //returndate.ToString("yyyy-mm-dd");
                 borrowokk = "N";
+                */
+                sqlcmd.Parameters.AddWithValue("@p_returndate", gridView4.GetRowCellValue(i, returndatee)); // 문자열을 datetime으로
+                sqlcmd.Parameters.AddWithValue("@p_borrowok", "N");
+                sqlcmd.Parameters.AddWithValue("@p_borrow_no", gridView4.GetRowCellValue(i, borrownoo).ToString());
 
-                sqlcmd.Parameters.AddWithValue("@p_returndate", returndate);
-                sqlcmd.Parameters.AddWithValue("@p_borrowok", borrowokk);
+                int a = sqlcmd.ExecuteNonQuery();
+                Console.WriteLine(a);
 
-                if (i == RowNum - 1)
+                if (i ==  RowNum-1)
                 {
-                    MessageBox.Show("수정되었습니다");
+                    MessageBox.Show("반납되었습니다");
                     search2();
+                    return;
                 }
-                sqlcmd.ExecuteNonQuery();
+                
             }
 
            /* if (sqlcmd.ExecuteNonQuery() >= 1)
@@ -672,7 +721,7 @@ namespace 도서대여프로그램
 
             sqlcmd.Parameters.AddWithValue("@p_name", namee.Text.ToString());
             sqlcmd.Parameters.AddWithValue("@p_tel", handphonee.Text.ToString());
-
+            sqlcmd.Parameters.AddWithValue("@p_bk_name", bk_name1.Text.ToString());
 
             try
             {

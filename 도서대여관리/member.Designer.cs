@@ -66,6 +66,8 @@
             this.username = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -75,113 +77,121 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(585, 155);
+            this.label1.Location = new System.Drawing.Point(1086, 310);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.Size = new System.Drawing.Size(106, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "회원등급";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 50);
+            this.label2.Location = new System.Drawing.Point(20, 100);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 14);
+            this.label2.Size = new System.Drawing.Size(76, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "회원명";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(195, 54);
+            this.label4.Location = new System.Drawing.Point(362, 108);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 14);
+            this.label4.Size = new System.Drawing.Size(97, 29);
             this.label4.TabIndex = 3;
             this.label4.Text = "회원번호";
             // 
             // cmb
             // 
             this.cmb.FormattingEnabled = true;
-            this.cmb.Location = new System.Drawing.Point(668, 149);
-            this.cmb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmb.Location = new System.Drawing.Point(1241, 298);
+            this.cmb.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.cmb.Name = "cmb";
-            this.cmb.Size = new System.Drawing.Size(71, 20);
+            this.cmb.Size = new System.Drawing.Size(128, 32);
             this.cmb.TabIndex = 4;
             // 
             // member_no
             // 
-            this.member_no.Location = new System.Drawing.Point(248, 51);
-            this.member_no.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.member_no.Location = new System.Drawing.Point(461, 102);
+            this.member_no.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.member_no.Name = "member_no";
-            this.member_no.Size = new System.Drawing.Size(204, 22);
+            this.member_no.Size = new System.Drawing.Size(375, 36);
             this.member_no.TabIndex = 5;
             // 
             // name
             // 
             this.name.HideSelection = false;
-            this.name.Location = new System.Drawing.Point(54, 47);
-            this.name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.name.Location = new System.Drawing.Point(100, 94);
+            this.name.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(88, 22);
+            this.name.Size = new System.Drawing.Size(160, 36);
             this.name.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(772, 154);
+            this.label5.Location = new System.Drawing.Point(1434, 308);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.Size = new System.Drawing.Size(106, 24);
             this.label5.TabIndex = 8;
             this.label5.Text = "전화번호";
             // 
             // tel
             // 
-            this.tel.Location = new System.Drawing.Point(838, 152);
-            this.tel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tel.Location = new System.Drawing.Point(1556, 304);
+            this.tel.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.tel.Name = "tel";
-            this.tel.Size = new System.Drawing.Size(193, 21);
+            this.tel.Size = new System.Drawing.Size(355, 35);
             this.tel.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(585, 191);
+            this.label8.Location = new System.Drawing.Point(1086, 382);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 12);
+            this.label8.Size = new System.Drawing.Size(106, 24);
             this.label8.TabIndex = 14;
-            this.label8.Text = "대여/가능건수";
+            this.label8.Text = "대여건수";
             // 
             // borrow
             // 
-            this.borrow.Location = new System.Drawing.Point(678, 190);
-            this.borrow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.borrow.Location = new System.Drawing.Point(1259, 380);
+            this.borrow.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.borrow.Name = "borrow";
-            this.borrow.Size = new System.Drawing.Size(61, 21);
+            this.borrow.ReadOnly = true;
+            this.borrow.Size = new System.Drawing.Size(110, 35);
             this.borrow.TabIndex = 15;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(772, 191);
+            this.label9.Location = new System.Drawing.Point(1434, 382);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 12);
+            this.label9.Size = new System.Drawing.Size(106, 24);
             this.label9.TabIndex = 16;
-            this.label9.Text = "예약/가능건수";
+            this.label9.Text = "반납건수";
             // 
             // reservation
             // 
-            this.reservation.Location = new System.Drawing.Point(867, 185);
-            this.reservation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reservation.Location = new System.Drawing.Point(1610, 370);
+            this.reservation.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.reservation.Name = "reservation";
-            this.reservation.Size = new System.Drawing.Size(50, 21);
+            this.reservation.ReadOnly = true;
+            this.reservation.Size = new System.Drawing.Size(89, 35);
             this.reservation.TabIndex = 17;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(746, 50);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(1385, 100);
+            this.button2.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 22);
+            this.button2.Size = new System.Drawing.Size(178, 44);
             this.button2.TabIndex = 20;
             this.button2.Text = "저장";
             this.button2.UseVisualStyleBackColor = true;
@@ -189,10 +199,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(603, 40);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(1120, 80);
+            this.button3.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 24);
+            this.button3.Size = new System.Drawing.Size(243, 48);
             this.button3.TabIndex = 21;
             this.button3.Text = "삭제";
             this.button3.UseVisualStyleBackColor = true;
@@ -208,12 +218,12 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gridControl1.Location = new System.Drawing.Point(10, 111);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.gridControl1.Location = new System.Drawing.Point(19, 222);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(542, 165);
+            this.gridControl1.Size = new System.Drawing.Size(1007, 330);
             this.gridControl1.TabIndex = 23;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -227,13 +237,13 @@
             this.colUsertel,
             this.colUserBorrow,
             this.colUserReserve});
-            this.gridView1.DetailHeight = 280;
+            this.gridView1.DetailHeight = 560;
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.ReadOnly = true;
-            this.gridView1.OptionsEditForm.PopupEditFormWidth = 700;
+            this.gridView1.OptionsEditForm.PopupEditFormWidth = 1300;
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged_1);
             // 
@@ -241,67 +251,67 @@
             // 
             this.coluserCode.Caption = "회원코드";
             this.coluserCode.FieldName = "member_no";
-            this.coluserCode.MinWidth = 17;
+            this.coluserCode.MinWidth = 32;
             this.coluserCode.Name = "coluserCode";
             this.coluserCode.Visible = true;
             this.coluserCode.VisibleIndex = 0;
-            this.coluserCode.Width = 66;
+            this.coluserCode.Width = 123;
             // 
             // coluserName
             // 
             this.coluserName.Caption = "회원명";
             this.coluserName.FieldName = "name";
-            this.coluserName.MinWidth = 17;
+            this.coluserName.MinWidth = 32;
             this.coluserName.Name = "coluserName";
             this.coluserName.Visible = true;
             this.coluserName.VisibleIndex = 1;
-            this.coluserName.Width = 66;
+            this.coluserName.Width = 123;
             // 
             // colUsergrade
             // 
             this.colUsergrade.Caption = "회원등급";
             this.colUsergrade.FieldName = "member_grade";
-            this.colUsergrade.MinWidth = 17;
+            this.colUsergrade.MinWidth = 32;
             this.colUsergrade.Name = "colUsergrade";
             this.colUsergrade.Visible = true;
             this.colUsergrade.VisibleIndex = 2;
-            this.colUsergrade.Width = 66;
+            this.colUsergrade.Width = 123;
             // 
             // colUsertel
             // 
             this.colUsertel.Caption = "회원전화번호";
             this.colUsertel.FieldName = "tel";
-            this.colUsertel.MinWidth = 17;
+            this.colUsertel.MinWidth = 32;
             this.colUsertel.Name = "colUsertel";
             this.colUsertel.Visible = true;
             this.colUsertel.VisibleIndex = 3;
-            this.colUsertel.Width = 66;
+            this.colUsertel.Width = 123;
             // 
             // colUserBorrow
             // 
-            this.colUserBorrow.Caption = "대출/가능권수";
+            this.colUserBorrow.Caption = "대여건수";
             this.colUserBorrow.FieldName = "borrow";
-            this.colUserBorrow.MinWidth = 17;
+            this.colUserBorrow.MinWidth = 32;
             this.colUserBorrow.Name = "colUserBorrow";
             this.colUserBorrow.Visible = true;
             this.colUserBorrow.VisibleIndex = 4;
-            this.colUserBorrow.Width = 66;
+            this.colUserBorrow.Width = 123;
             // 
             // colUserReserve
             // 
-            this.colUserReserve.Caption = "예약/가능권수";
+            this.colUserReserve.Caption = "반납건수";
             this.colUserReserve.FieldName = "reserve";
-            this.colUserReserve.MinWidth = 17;
+            this.colUserReserve.MinWidth = 32;
             this.colUserReserve.Name = "colUserReserve";
             this.colUserReserve.Visible = true;
             this.colUserReserve.VisibleIndex = 5;
-            this.colUserReserve.Width = 66;
+            this.colUserReserve.Width = 123;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(305, 37);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 21);
+            this.textBox1.Size = new System.Drawing.Size(233, 35);
             this.textBox1.TabIndex = 7;
             // 
             // label3
@@ -317,7 +327,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(95, 37);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
+            this.textBox2.Size = new System.Drawing.Size(100, 35);
             this.textBox2.TabIndex = 9;
             // 
             // label6
@@ -331,10 +341,10 @@
             // 
             // update
             // 
-            this.update.Location = new System.Drawing.Point(912, 254);
-            this.update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.update.Location = new System.Drawing.Point(1694, 508);
+            this.update.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(96, 22);
+            this.update.Size = new System.Drawing.Size(178, 44);
             this.update.TabIndex = 23;
             this.update.Text = "수정";
             this.update.UseVisualStyleBackColor = true;
@@ -343,10 +353,10 @@
             // 
             // search
             // 
-            this.search.Location = new System.Drawing.Point(458, 53);
-            this.search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.search.Location = new System.Drawing.Point(851, 106);
+            this.search.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(63, 19);
+            this.search.Size = new System.Drawing.Size(117, 38);
             this.search.TabIndex = 24;
             this.search.Text = "검색";
             this.search.UseVisualStyleBackColor = true;
@@ -365,18 +375,18 @@
             this.groupControl1.Controls.Add(this.button1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1052, 92);
+            this.groupControl1.Size = new System.Drawing.Size(1954, 184);
             this.groupControl1.TabIndex = 25;
             this.groupControl1.Text = "회원정보관리";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(950, 50);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(1764, 100);
+            this.button5.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(96, 22);
+            this.button5.Size = new System.Drawing.Size(178, 44);
             this.button5.TabIndex = 31;
             this.button5.Text = "초기화";
             this.button5.UseVisualStyleBackColor = true;
@@ -384,10 +394,10 @@
             // 
             // Ucheck
             // 
-            this.Ucheck.Location = new System.Drawing.Point(644, 50);
-            this.Ucheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Ucheck.Location = new System.Drawing.Point(1196, 100);
+            this.Ucheck.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Ucheck.Name = "Ucheck";
-            this.Ucheck.Size = new System.Drawing.Size(96, 22);
+            this.Ucheck.Size = new System.Drawing.Size(178, 44);
             this.Ucheck.TabIndex = 32;
             this.Ucheck.Text = "수정";
             this.Ucheck.UseVisualStyleBackColor = true;
@@ -395,10 +405,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(848, 50);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(1575, 100);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 22);
+            this.button1.Size = new System.Drawing.Size(178, 44);
             this.button1.TabIndex = 26;
             this.button1.Text = "삭제";
             this.button1.UseVisualStyleBackColor = true;
@@ -406,55 +416,81 @@
             // 
             // usercode
             // 
-            this.usercode.Location = new System.Drawing.Point(836, 112);
-            this.usercode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.usercode.Location = new System.Drawing.Point(1553, 224);
+            this.usercode.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.usercode.Name = "usercode";
             this.usercode.ReadOnly = true;
-            this.usercode.Size = new System.Drawing.Size(196, 21);
+            this.usercode.Size = new System.Drawing.Size(361, 35);
             this.usercode.TabIndex = 29;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(772, 114);
+            this.label7.Location = new System.Drawing.Point(1434, 228);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.Size = new System.Drawing.Size(106, 24);
             this.label7.TabIndex = 28;
             this.label7.Text = "회원번호";
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(651, 111);
-            this.username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.username.Location = new System.Drawing.Point(1209, 222);
+            this.username.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(88, 21);
+            this.username.Size = new System.Drawing.Size(160, 35);
             this.username.TabIndex = 30;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(585, 114);
+            this.label10.Location = new System.Drawing.Point(1086, 228);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 12);
+            this.label10.Size = new System.Drawing.Size(82, 24);
             this.label10.TabIndex = 27;
             this.label10.Text = "회원명";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(596, 258);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Location = new System.Drawing.Point(1107, 516);
+            this.button6.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 26);
+            this.button6.Size = new System.Drawing.Size(165, 52);
             this.button6.TabIndex = 31;
             this.button6.Text = "대여/버튼";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(1086, 445);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(470, 24);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "* 회원등급에 따라 대여건수가 달라집니다.";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(1103, 478);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(241, 24);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "(일반 : 4건 vip : 5건 )";
+            // 
             // memberform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 366);
+            this.ClientSize = new System.Drawing.Size(1954, 732);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.usercode);
@@ -472,7 +508,7 @@
             this.Controls.Add(this.cmb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "memberform";
             this.Text = "member";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -527,5 +563,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colUserReserve;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
