@@ -188,12 +188,12 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1385, 100);
+            this.button2.Location = new System.Drawing.Point(1195, 100);
             this.button2.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(178, 44);
             this.button2.TabIndex = 20;
-            this.button2.Text = "저장";
+            this.button2.Text = "입력";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -394,7 +394,7 @@
             // 
             // Ucheck
             // 
-            this.Ucheck.Location = new System.Drawing.Point(1196, 100);
+            this.Ucheck.Location = new System.Drawing.Point(1385, 100);
             this.Ucheck.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Ucheck.Name = "Ucheck";
             this.Ucheck.Size = new System.Drawing.Size(178, 44);
