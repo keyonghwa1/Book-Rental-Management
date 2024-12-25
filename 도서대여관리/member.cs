@@ -28,9 +28,9 @@ namespace 도서대여관리
         {
             bwork = true; // db 연결
 
-            string connection_str = @"Server=192.168.219.102; uid=system; pwd=hr2; database=master";
+            //string connection_str = @"Server=192.168.219.102; uid=system; pwd=hr2; database=master";
             
-            //string connection_str = @"Server=192.168.1.11; uid=system; pwd=hr2; database=master";
+            string connection_str = @"Server=192.168.1.11; uid=system; pwd=hr2; database=master";
             
             sql_connection = new SqlConnection(connection_str);
             try
